@@ -1,0 +1,48 @@
+<html><head>
+	<title>Kwitter Room Page</title>
+<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.OxsXq8UvEOs.O/m=gapi_iframes/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCN7FQWUE2nltJhOBLbHOeQiriRsIg/cb=gapi.loaded_0" async=""></script><script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&amp;display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="text/javascript" charset="UTF-8" src="https://apis.google.com/js/api.js?onload=__iframefcb876212" gapi_processed="true"></script></head>
+<body>
+
+
+<div class="container">
+	<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+
+	<center>
+		<h1 class="header">	
+			Kwitter	
+			<sup>
+				<img src="m2.png">
+			</sup>
+		</h1>
+		<h3 id="user_name" class="color_white">Welcome bruh!</h3>
+
+		<div class="form-group input_div_room_page">
+			<label>#Add Room:</label>
+			<input type="text" id="room_name" class="form-control" placeholder="#Room Name">
+		</div>
+		
+		<button onclick="addRoom();" class="btn btn-success">#Add Room</button>
+
+		<h3 class="color_white">#TRENDINGROOMS</h3>
+
+		<div id="output"><div class="room_name" id="0" onclick="redirectToRoomName(this.id)">#0</div><hr><div class="room_name" id="00" onclick="redirectToRoomName(this.id)">#00</div><hr><div class="room_name" id="1" onclick="redirectToRoomName(this.id)">#1</div><hr><div class="room_name" id="01" onclick="redirectToRoomName(this.id)">#01</div><hr><div class="room_name" id="2" onclick="redirectToRoomName(this.id)">#2</div><hr><div class="room_name" id="02" onclick="redirectToRoomName(this.id)">#02</div><hr><div class="room_name" id="00006" onclick="redirectToRoomName(this.id)">#00006</div><hr><div class="room_name" id="23" onclick="redirectToRoomName(this.id)">#23</div><hr><div class="room_name" id="69" onclick="redirectToRoomName(this.id)">#69</div><hr><div class="room_name" id="111" onclick="redirectToRoomName(this.id)">#111</div><hr><div class="room_name" id="786" onclick="redirectToRoomName(this.id)">#786</div><hr><div class="room_name" id="1234" onclick="redirectToRoomName(this.id)">#1234</div><hr><div class="room_name" id="9024" onclick="redirectToRoomName(this.id)">#9024</div><hr><div class="room_name" id="123456789" onclick="redirectToRoomName(this.id)">#123456789</div><hr><div class="room_name" id="00000000000000000000000000000000000" onclick="redirectToRoomName(this.id)">#00000000000000000000000000000000000</div><hr><div class="room_name" id="02" gang="" onclick="redirectToRoomName(this.id)">#02 gang</div><hr><div class="room_name" id="0aabitha" onclick="redirectToRoomName(this.id)">#0aabitha</div><hr><div class="room_name" id="5793yudy" onclick="redirectToRoomName(this.id)">#5793yudy</div><hr><div class="room_name" id="@" onclick="redirectToRoomName(this.id)">#@</div><hr><div class="room_name" id="@1" onclick="redirectToRoomName(this.id)">#@1</div><hr><div class="room_name" id="@abc" onclick="redirectToRoomName(this.id)">#@abc</div><hr><div class="room_name" id="ABC" onclick="redirectToRoomName(this.id)">#ABC</div><hr><div class="room_name" id="ARJUNCODING" onclick="redirectToRoomName(this.id)">#ARJUNCODING</div><hr><div class="room_name" id="Aradhya's" onclick="redirectToRoomName(this.id)">#Aradhya's</div><hr><div class="room_name" id="Aradhya's" birthday="" onclick="redirectToRoomName(this.id)">#Aradhya's birthday</div><hr><div class="room_name" id="Assalamu" onclick="redirectToRoomName(this.id)">#Assalamu</div><hr><div class="room_name" id="Assalamu" alaikum="" onclick="redirectToRoomName(this.id)">#Assalamu Alaikum</div><hr><div class="room_name" id="Best" onclick="redirectToRoomName(this.id)">#Best</div><hr><div class="room_name" id="Best" room="" ever="" onclick="redirectToRoomName(this.id)">#Best Room Ever</div><hr><div class="room_name" id="Buddies" onclick="redirectToRoomName(this.id)">#Buddies</div><hr><div class="room_name" id="Car" onclick="redirectToRoomName(this.id)">#Car</div><hr><div class="room_name" id="Class" onclick="redirectToRoomName(this.id)">#Class</div><hr><div class="room_name" id="Coding" onclick="redirectToRoomName(this.id)">#Coding</div><hr><div class="room_name" id="Computer" onclick="redirectToRoomName(this.id)">#Computer</div><hr><div 
+	</center>
+</div>
+
+
+<script src="kwitter_room.js"></script>
+
+<iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="100%" id="I0_1631189826887" name="I0_1631189826887" src="https://testkwitter.firebaseapp.com/__/auth/iframe?apiKey=AIzaSyBQyjrjTsIQsGMGcgu-cr1HjszcHi5ZWMk&amp;appName=%5BDEFAULT%5D&amp;v=3.1.0&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.OxsXq8UvEOs.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCN7FQWUE2nltJhOBLbHOeQiriRsIg%2Fm%3D__features__#id=I0_1631189826887&amp;_gfid=I0_1631189826887&amp;parent=https%3A%2F%2Fmahdihat791.github.io&amp;pfname=&amp;rpctoken=33521896" style="position: absolute; top: -100px; width: 1px; height: 1px;"></iframe></body></html>
